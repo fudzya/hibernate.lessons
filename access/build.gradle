@@ -1,0 +1,6 @@
+dependencies {
+	compile project(':common')
+
+	compile group: 'org.hibernate',  name: 'hibernate-entitymanager'
+	compile group: 'ch.qos.logback', name: 'logback-classic'
+}

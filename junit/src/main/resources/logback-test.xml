@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{100} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+	<logger name="bitronix.tm"                    level="ERROR"/>
+	<logger name="org.h2"                         level="ERROR"/>
+	<logger name="org.hibernate"                  level="TRACE"/>
+	<logger name="org.hibernate.cfg"              level="TRACE"/>
+	<logger name="org.hibernate.sql"              level="DEBUG"/>
+	<logger name="org.hibernate.stat"             level="DEBUG"/>
+	<logger name="org.hibernate.type"             level="ERROR"/>
+	<logger name="org.hibernate.hql.internal.ast" level="DEBUG"/>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

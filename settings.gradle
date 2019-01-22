@@ -1,0 +1,4 @@
+include(':common')
+include(':access')
+include(':junit')
+include(':application')

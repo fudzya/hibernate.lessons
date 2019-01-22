@@ -1,0 +1,13 @@
+dependencies {
+	
+	compile project(':common')
+	compile group: 'org.hibernate',  name: 'hibernate-entitymanager'
+	compile group: 'ch.qos.logback', name: 'logback-classic'
+
+	compile group: 'mysql',                        name: 'mysql-connector-java',    version: '8.0.12'
+	compile group: 'com.github.h-thurow',          name: 'simple-jndi',             version: '0.17.2'
+	compile group: 'com.h2database',               name: 'h2',                      version: '1.4.197'
+	compile group: 'junit',                        name: 'junit',                   version: '4.12'
+	compile group: 'com.googlecode.junit-toolbox', name: 'junit-toolbox',           version: '2.4'
+	compile group: 'org.codehaus.btm',             name: 'btm',                     version: '2.1.4'
+}

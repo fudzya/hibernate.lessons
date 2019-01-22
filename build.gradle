@@ -1,0 +1,37 @@
+subprojects {
+	apply plugin: 'groovy'
+
+	configurations.all {
+		resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+
+			if (details.requested.group == 'org.hibernate') {
+				details.useVersion('5.3.5.Final')
+			}
+
+			if (details.requested.group == 'org.hibernate.validator') {
+				details.useVersion('6.0.13.Final')
+			}
+
+			if (details.requested.group == 'ch.qos.logback') {
+				details.useVersion('1.2.3')
+			}
+		}
+	}
+
+	repositories {
+		mavenCentral()
+
+		maven { url 'http://nexus.sigma.sbrf.ru:8099/nexus/content/repositories/jcenter' }
+	}
+
+	dependencies {
+		compile     localGroovy()
+		testCompile project(':junit')
+	}
+
+	test {
+		systemProperty 'application.db.type', System.getProperty('application.db.type')
+
+		testLogging.showStandardStreams = true
+	}
+}
