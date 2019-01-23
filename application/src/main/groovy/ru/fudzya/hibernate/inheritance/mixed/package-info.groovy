@@ -1,0 +1,1 @@
+package ru.fudzya.hibernate.inheritance.mixed
